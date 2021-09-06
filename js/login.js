@@ -4,6 +4,13 @@
 
 
 
-document.addEventListener("DOMContentLoaded", function(e){
+
+document.addEventListener("DOMContentLoaded", function (e) {
 
 });
+
+function InfoLocalStorage() {
+    var mail = document.getElementById("mail").value;
+    localStorage.setItem('User', mail);
+    window.location = "index.html";
+}
