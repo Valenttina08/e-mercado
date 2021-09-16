@@ -15,16 +15,22 @@ function datosDeAutos(array) {
             auto = `Nombre:` + " " + producto.name + `<br/>` +
                 `Descripción:` + " " + producto.description + `<br/>` +
                 `Precio:` + " " + producto.cost + " " + producto.currency + `<br/>` +
-                `Mas Vendido:` + " " + producto.soldCount + `<br/>` + 
-                `<img width= 400px src=  "` + producto.imgSrc + `"` + `<br/>` + `<hr/>`
-                
-        }
+                `Mas Vendido:` + " " + producto.soldCount + `<br/>` +
+                `<img width= 400px src=  "` + producto.imgSrc + `"`  + `<hr/>` + `<br>` + `<button onclick= mostrarProduct(` + producto.id + `) type= "button"> detalle </button>` + '<br><hr><br>'
 
+        }
 
 
         document.getElementById("lista").innerHTML += auto;
     }
+
 }
+
+function mostrarProduct(id) {
+    window.localStorage.setItem('producto', id);
+    window.location = 'product-info.html';
+}
+
 
 document.addEventListener("DOMContentLoaded", function (e) {
 
@@ -109,11 +115,11 @@ function buscar() {
         for (let auto of autos) {
             let nombre = auto.name.toLowerCase();
             if (nombre.indexOf(texto) !== -1) {
-                listaBuscador.push(auto);  
+                listaBuscador.push(auto);
             }
         }
         if (listaBuscador.length !== 0) {
-           listaBuscador.sort(function (a, b) {
+            listaBuscador.sort(function (a, b) {
                 if (a.name > b.name) {
                     return 1;
                 }
