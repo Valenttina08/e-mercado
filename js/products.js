@@ -15,8 +15,8 @@ function datosDeAutos(array) {
             auto = `Nombre:` + " " + producto.name + `<br/>` +
                 `Descripción:` + " " + producto.description + `<br/>` +
                 `Precio:` + " " + producto.cost + " " + producto.currency + `<br/>` +
-                `Mas Vendido:` + " " + producto.soldCount + `<br/>` +
-                `<img width= 400px src=  "` + producto.imgSrc + `"`  + `<hr/>` + `<br>` + `<button onclick= mostrarProduct(` + producto.id + `) type= "button"> detalle </button>` + '<br><hr><br>'
+                `Mas Vendido:` + " " + producto.soldCount + `<br/>` + `<br/>`+
+                `<img width= "" class="card-img-top" src=  "` + producto.imgSrc + `"` + `<hr/>` + `<br>` + `<button onclick= mostrarProduct(` + producto.id + `) type= "button" class="btn btn-outline-primary"> detalle </button>` + '<br><hr><br>'
 
         }
 

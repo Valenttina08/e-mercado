@@ -27,28 +27,61 @@
       <a class="py-2 d-none d-md-inline-block" href id="mail"></a>
     </div>
   </nav>
-
+<!--
   <p>Buscador:</p>
   <input id="buscador" onchange="buscar()" onkeypress="buscar()" onpaste="buscar()" oninput="buscar()">
 
+-->
 
-  <p>Filtros</p>
-  <input class= "" id="precio-filtro1" placeholder="min"><input id="precio-filtro2" placeholder="max"><br />
+<nav class="navbar navbar-light bg-light">
+  <div class="container-fluid">
+    <form class="d-flex">
+      <input id="buscador" onchange="buscar()" onkeypress="buscar()" onpaste="buscar()" oninput="buscar()" class="form-control me-2" type="Buscar" placeholder="Buscador" >
+     
+    
+    </form>
+  </div>
+</nav>
+
   
-
-  <button id="filtrar">Filtrar</button>
-  <button id="borrar">Borrar</button><br><br/>
-  <button id="ascendente">Ascendente</button>
-  <button id="descendente">Descendente</button>
-  <button id="mas-vendido">Mas Vendido</button>
-
-</div>
-
-  <div>
-    <p id="lista" style="text-align:center"></p>
+  <div class="navbar navbar-light bg-light">
+    <div class="container-fluid">
+      <div class="d-flex">
+  <input  id="precio-filtro1" placeholder="min" class="form-control me-2">
+  <input id="precio-filtro2" placeholder="max" class="form-control me-2"><br />
+  </div>
+  </div>
   </div>
 
 
+  <button type="button" class="btn btn-outline-primary" id="filtrar">Filtrar</button>
+  <button id="borrar" type="button" class="btn btn-outline-primary">Borrar</button><br><br/>
+  <button type="button" class="btn btn-outline-primary"id="ascendente">Ascendente</button>
+  <button type="button" class="btn btn-outline-primary"id="descendente">Descendente</button>
+  <button type="button" class="btn btn-outline-primary"id="mas-vendido">Mas Vendido</button>
+
+</div>
+
+<!--
+  <div>
+    <p id="lista" style="text-align:center"></p>
+  </div>
+  --->
+
+  <div class="card" style="width: 600px; height: 600px;">
+    
+    <div class="card-body">
+      
+      <p id="lista"class="card-text">
+    
+    </div>
+  </div>
+ <!--- <div id="lista"  style="text-align: center; ">
+    
+    
+  </div>
+
+--->
   <div id="spinner-wrapper">
     <div class="lds-ring">
       <div></div>
