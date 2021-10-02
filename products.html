@@ -23,9 +23,21 @@
       <a class="py-2 d-none d-md-inline-block" href="categories.html">Categorías</a>
       <a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a>
       <a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a>
-      <a class="py-2 d-none d-md-inline-block" href="cart.html">Mi carrito</a>
-      <a class="py-2 d-none d-md-inline-block" href id="mail"></a>
-    </div>
+     
+      <div class="btn-group" role="group">
+        <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          <a href id="mail"></a>
+           </button>
+        <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+          <a class="dropdown-item" href="">Mi Perfil</a>
+          <a class="dropdown-item" href="cart.html">Mi carrito</a> 
+          <a class="dropdown-item" href="index.html" onclick="localStorage.clear()">Cerrar sesión</a>
+          
+        </div>
+      </div>
+      </div>
+   
   </nav>
 <!--
   <p>Buscador:</p>
@@ -67,14 +79,15 @@
     <p id="lista" style="text-align:center"></p>
   </div>
   --->
-
-  <div class="card" style="width: 600px; height: 600px;">
+<div class="mx-auto" style="width: 200px;">
+  <div class="card" style="width: 600px;">
     
     <div class="card-body">
       
       <p id="lista"class="card-text">
     
     </div>
+  </div>
   </div>
  <!--- <div id="lista"  style="text-align: center; ">
     
