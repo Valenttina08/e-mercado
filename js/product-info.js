@@ -11,6 +11,7 @@ var comentarioListaUsu = [];
 
 
 
+
 function showRelacionados(autoLista) {
     let relacion = "";
    
@@ -93,7 +94,7 @@ function ima(producto) {
 let comentarios = [];
 function comen(array) {
 
-    console.log("array:", array.comments)
+  //  console.log("array:", array.comments)
 
     //  document.getElementById("comentario").innerHTML = "";
 
@@ -116,6 +117,7 @@ function comen(array) {
         document.getElementById("comentario").innerHTML += comentt;
 
     }
+    
 }
 
 
@@ -141,9 +143,9 @@ function agregarComentario() {
 
     comentarioListaUsu.push(comentario);
     localStorage.setItem("listaComenUsu", JSON.stringify(comentarioListaUsu));
-    location.reload();
-
-};
+    location.reload(); 
+}
+;
 
 
 let autos = [];
@@ -173,26 +175,40 @@ function datosDeAutos(array) {
 
 };
 
+
 document.addEventListener("DOMContentLoaded", function (e) {
 
-    const url = PRODUCT_INFO_COMMENTS_URL + "comentario_" + id + ".json";
-    
+   const url = PRODUCT_INFO_COMMENTS_URL + "comentario_" + id + ".json";
+  
+   
 
+    
+        
     getJSONData(PRODUCT_INFO_COMMENTS_URL + "comentario_" + id + ".json").then(function (resultado) {
         if (resultado.status === "ok") {
             comentarios = resultado.data;
 
             comentt = comentarios;
 
-            comentarioListaUsu = JSON.parse(window.localStorage.getItem('listaComenUsu'));
+            var listaLocal = JSON.parse(window.localStorage.getItem('listaComenUsu'));
+            if (listaLocal != null) {
+                comentarioListaUsu = listaLocal;
+            }
+
+       
+            
+          
+
             for (let i = 0; i < comentarioListaUsu.length; i++) {
                 if (comentarioListaUsu[i].auto == id) {
                     comentarios.comments.push(comentarioListaUsu[i]);
                 }
             }
+            
             comen(comentarios);
+            
 
-        }
+        } 
     });
 
 });

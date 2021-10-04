@@ -30,7 +30,7 @@
         <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
           <a class="dropdown-item" href="">Mi Perfil</a>
           <a class="dropdown-item" href="cart.html">Mi carrito</a>
-          <a class="dropdown-item" href="index.html">Cerrar sesión</a>
+          <a class="dropdown-item" href="index.html" onclick="localStorage.clear()">Cerrar sesión</a>
       </div>
       </div>
     </div>
@@ -58,7 +58,7 @@
     <div class="container mt-5">
     <div class="form-floating">
       <textarea class="form-control" placeholder="Comentarios" id="comentado"></textarea><br>
-      <button onclick="agregarComentario()" type="button" class="btn btn-outline-info">Comentar</button>
+      <button onclick="agregarComentario()" type="submit" class="btn btn-outline-info">Comentar</button>
         <select id="puntuacion"  class="form-select" aria-label="Default select example" name="select">
         <option value="1"> Valor 1</option>
         <option value="2" selected> Valor 2</option>
