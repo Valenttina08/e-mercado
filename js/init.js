@@ -4,9 +4,8 @@ const CATEGORY_INFO_URL = "https://japdevdep.github.io/ecommerce-api/category/12
 const PRODUCTS_URL = "https://valenttina08.github.io/ecommerce-api/ProductosAll.json";
 //const PRODUCT_INFO_URL = "https://japdevdep.github.io/ecommerce-api/product/5678.json";
 const PRODUCT_INFO_URL_G = "https://valenttina08.github.io/ecommerce-api/";
-//const PRODUCT_INFO_COMMENTS_URL = "https://japdevdep.github.io/ecommerce-api/product/5678-comments.json";
 const PRODUCT_INFO_COMMENTS_URL = "https://valenttina08.github.io/ecommerce-api/"
-const CART_INFO_URL = "https://japdevdep.github.io/ecommerce-api/cart/987.json";
+const CART_INFO_URL = "https://japdevdep.github.io/ecommerce-api/cart/654.json";
 const CART_BUY_URL = "https://japdevdep.github.io/ecommerce-api/cart/buy.json";
 
 var showSpinner = function(){
