@@ -18,7 +18,7 @@ function subtotaltotal(x, i) {
     }
     
 
-    document.getElementById(`sub${i}`).innerHTML = `Subtotal:`+ moneda + subtotal;
+    document.getElementById(`sub${i}`).innerHTML = `Subtotal: UYU` + subtotal;
 
 }
 
@@ -52,7 +52,7 @@ function showarticulos(articulo) {
             Moneda: `+ art.currency + `<br/>
     
             Costo: `+ art.unitCost + `<br/>
-            <p class="text-muted" id="sub${i}"> Subtotal: ` + art.currency +" "+ subtotal +`</p> <hr/>
+            <p class="text-muted" id="sub${i}"> Subtotal: UYU` +" "+ subtotal +`</p> <hr/>
 
             <div/>
             

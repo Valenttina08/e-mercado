@@ -18,22 +18,31 @@
 <body>
   <nav class="site-header sticky-top py-1 bg-dark">
     <div class="container d-flex flex-column flex-md-row justify-content-between">
+      <form class=" form-inline col-m-1">
+        <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search" id="buscador"
+          onchange="buscar()" onkeypress="buscar()" onpaste="buscar()" oninput="buscar()">
+        <button class="btn btn-outline-secondary" type="submit">Buscar</button>
+      </form>
       <a class="py-2 d-none d-md-inline-block" href="index.html">Inicio</a>
       <a class="py-2 d-none d-md-inline-block" href="categories.html">Categorías</a>
       <a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a>
       <a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a>
+  
       <div class="btn-group" role="group">
         <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown"
           aria-haspopup="true" aria-expanded="false">
           <a href id="mail"></a>
         </button>
         <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-          <a class="dropdown-item" href="">Mi Perfil</a>
+          <a class="dropdown-item" href="my-profile.html">Mi Perfil</a>
           <a class="dropdown-item" href="cart.html">Mi carrito</a>
           <a class="dropdown-item" href="index.html" onclick="localStorage.removeItem(User)">Cerrar sesión</a>
-      </div>
+  
+        </div>
+  
       </div>
     </div>
+  
   </nav>
 
 

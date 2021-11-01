@@ -34,6 +34,7 @@
 </head>
 
 <body>
+  <!------->
   <nav class="site-header sticky-top py-1 bg-dark">
     <div class="container d-flex flex-column flex-md-row justify-content-between">
       <a class="py-2 d-none d-md-inline-block" href="index.html">Inicio</a>
@@ -46,33 +47,88 @@
           <a href id="mail"></a>
         </button>
         <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-          <a class="dropdown-item" href="">Mi Perfil</a>
+          <a class="dropdown-item" href="my-profile.html">Mi Perfil</a>
           <a class="dropdown-item" href="cart.html">Mi carrito</a>
-          <a class="dropdown-item" href="index.html" onclick="localStorage.removeItem(User)">Cerrar sesión</a>
+          <a class="dropdown-item" href="index.html" onclick="localStorage.clear()">Cerrar sesión</a>
         </div>
       </div>
     </div>
   </nav>
+  
   <div class="container p-5">
-    <div class="alert alert-danger" role="alert" style="position: relative; width:auto; top: 0;">
-      <h4 class="alert-heading">¡A trabajar! :)</h4>
-      <p>Esta sección corresponde a: Entrega 6 (Fecha de entrega: 31/10/2021).</p>
-      <hr>
-      <p class="mb-0">Para saber qué debes hacer, fijate en la actividad en CREA correspondiente a esta entrega.</p>
-    </div>
-  </div>
-  <footer class="text-muted bg-light">
-    <div class="container">
-      <p>Este sitio forma parte de Desarrollo Web - JAP - 2020</p>
-      <p>Clickea <a target="_blank" href="Letra.pdf">aquí</a> para descargar la letra del obligatorio.</p>
-    </div>
-  </footer>
+   
   <div class="alert fade alert-success" role="alert" id="alertResult">
     <span id="resultSpan"></span>
     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
       <span aria-hidden="true">&times;</span>
     </button>
   </div>
+  <div>
+    <!---
+      Nombres: <input type="text" name="Nombre" id="Nombre">
+      <br>
+      Apellidos: <input type="text" name="Nombre" id="apellido">
+      <br>
+      Edad <input type="number" name="Edad" id="edad">
+      <br>
+      Email <input type="email" name="email" id="email">
+      <br>
+      Telefono <input type="tel" name="Telefono" id="cel">
+    </p>
+    
+    <button onclick="perfil()">Guardar</button>
+    ----->
+    
+    <h3><u>Mi Perfil</u></h3><br/>
+    <h5><u>Datos Personales</u></h5><br/>
+    <form>
+    
+     <div class="row " >
+       <div class="col-2 ">
+         <img src="img/icono de perfil.png" width="100px" alt="">
+       </div>
+       <div class="col md-6 lg-3">
+      <div class="form-row">
+        <div class="col-md-4 mb-3">
+          <label for="validationDefault01">Nombres</label>
+          <input type="text" class="form-control" id="Nombre" placeholder="First name"  required>
+        </div>
+        <div class="col-md-4 mb-3">
+          <label for="validationDefault02">Apellidos</label>
+          <input type="text" class="form-control" id="apellido" placeholder="Last name"  required>
+        </div>
+        <div class="col-md-4 mb-3">
+          <label for="validationDefaultUsername">Email</label>
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroupPrepend2">@</span>
+            </div>
+            <input type="text" class="form-control" id="email" placeholder="email"
+              aria-describedby="inputGroupPrepend2" required>
+          </div>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="col-md-3 mb-3">
+          <label for="validationDefault03">Edad</label>
+          <input type="number" class="form-control" id="edad"  required>
+        </div>
+        <div class="col-md-3 mb-3">
+          <label for="validationDefault04">Teléfono</label>
+          <input type="text" class="form-control" id="cel"  required>
+        </div>
+      </div>
+    
+      <button class="btn btn-primary" onclick="perfil()" >Guardar</button>
+      </div>
+    </form>
+    
+    </div>
+    </div>
+
+   
+    
+  
   <div id="spinner-wrapper">
     <div class="lds-ring">
       <div></div>
