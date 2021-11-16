@@ -140,4 +140,83 @@ a.custom-card:hover {
   color: orange;
   }
 
+  .fomulario-label{
+    display:block;
+    cursor:pointer;
+  }
+.formulario__grupo-input{
+  position: relative;
+}
+
+.formulario__input{
+  width: 50%;
+  border: 3px solid transparent;
+  border-radius: 3px;
+  transition: .3s ease all;
+}
+.formulario__input:focus{
+  border: 3px solid #0087F7;
+  outline: none;
+  box-shadow: 3px 0px 30px rg(163, 163, 163, 0.4);
+}
+.formulario__input-error{
+  font-size: 12px;
+  margin-bottom: 0;
+  display: none;
+}
+.formulario__input-error-activo{
+  display: block;
+}
+.formulario-validacion-estado{
+  position: absolute;
+  bottom: 15px;
+  z-index: 100;
+  font-size: 16px;
+  opacity: 0;
+  
+}
+.mensaje{
+  height: 45px;
+  line-height: 45px;
+  background: #f66060;
+  padding: 0 15px;
+  border-radius: 3px;
+  text-align: center;
+  display: none;
+}
+.mensaje-activo{
+  display: block;
+}
+.mensaje
+
+.formulario-grupo-correcto .formulario-validacion-estado{
+  color: #1ed12d;
+  opacity: 1;
+}
+
+.formulario-grupo-correcto .formulario__input{
+  border: 3px solid #1ed12d
+}
+
+
+.formulario-grupo-incorrecto .formulario-validacion-estado{
+ color: #bb2929;
+ opacity: 1;
+}
+.formulario-grupo-incorrecto .formulario__input{
+  border: 3px solid #bb2929
+}
+
+.input-ok{
+border: 3px solid #1ed12d
+}
+
+.input-error{
+  border: 3px solid #bb2929
+}
+
+
+
+
+
 
